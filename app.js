@@ -2,6 +2,8 @@ let palabras = ['manzana', 'puerta', 'tobillo','tocar', 'estupido', 'computadora
 
 let palabraSecreta = generarPalabra();
 let palabraOculta = '';
+let intentos = 0;
+let intentosMaximos = 5;
 
 function generarPalabra() {
     let palabra = Math.floor(Math.random() * palabras.length);
@@ -19,8 +21,7 @@ function mostrarPalabra() {
 
 mostrarPalabra();
 
-function adivinarLetra() {
-    let letra = document.getElementById('letra').value;
+function adivinarLetra(letra) {
     for(i = 0; i < palabraSecreta.length; i++){
         if(letra === palabraSecreta[i]){
             palabraOculta[i] = letra;
@@ -28,11 +29,29 @@ function adivinarLetra() {
         }
     }
 
+    if(!palabraSecreta.includes(letra)){
+        if(intentos < intentosMaximos){
+            intentos++;
+            console.log(intentos);
 
-    document.getElementById('letra').value = '';
+            if(intentos == 1){
+                agregarFallo('O');
+            }else if(intentos == 2){
+                agregarFallo('|');
+            }else if(intentos == 3){
+                agregarFallo('/');
+            }
+
+        }else if(intentos === intentosMaximos){
+            alert('perdiste');
+            reiniciarJuego();
+        }
+    }
+
     actualizarPalabra();
     return;
 }
+
 
 function actualizarPalabra(){
     let palabraHTML = document.getElementById('palabra');
@@ -40,5 +59,17 @@ function actualizarPalabra(){
     return;
 }
 
+function agregarFallo(parteDeCuerpo) {
+    let cuerpo = document.getElementById('cuerpo');
+    let elemento = document.createElement('p');
+    elemento.innerHTML = parteDeCuerpo;
+    cuerpo.appendChild(elemento);
+}
+
+function reiniciarJuego(){
+    location.reload();
+}
+
 console.log(palabraSecreta);
 console.log(palabraOculta);
+
