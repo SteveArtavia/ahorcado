@@ -33,14 +33,7 @@ function adivinarLetra(letra) {
         if(intentos < intentosMaximos){
             intentos++;
             console.log(intentos);
-
-            if(intentos == 1){
-                agregarFallo('O');
-            }else if(intentos == 2){
-                agregarFallo('|');
-            }else if(intentos == 3){
-                agregarFallo('/');
-            }
+            agregarFallo();
 
         }else if(intentos === intentosMaximos){
             alert('perdiste');
@@ -59,11 +52,12 @@ function actualizarPalabra(){
     return;
 }
 
-function agregarFallo(parteDeCuerpo) {
-    let cuerpo = document.getElementById('cuerpo');
-    let elemento = document.createElement('p');
-    elemento.innerHTML = parteDeCuerpo;
-    cuerpo.appendChild(elemento);
+function agregarFallo(){
+    let barra = document.getElementById('barra');
+    let widthActual = parseInt(barra.style.width) || 0;
+    if(widthActual < 100){
+        barra.style.width = (widthActual + (100 / intentosMaximos)) + '%';
+    }
 }
 
 function reiniciarJuego(){
