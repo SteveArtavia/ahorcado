@@ -28,17 +28,24 @@ function adivinarLetra() {
         }
     }
 
-
     document.getElementById('letra').value = '';
     actualizarPalabra();
     return;
 }
+
+document.getElementById('letra').addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        adivinarLetra();
+    }
+})
 
 function actualizarPalabra(){
     let palabraHTML = document.getElementById('palabra');
     palabraHTML.innerHTML = palabraOculta.join(' ');
     return;
 }
+
+
 
 console.log(palabraSecreta);
 console.log(palabraOculta);
