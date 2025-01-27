@@ -41,10 +41,15 @@ function adivinarLetra(letra) {
         }
     }
 
+    if(!palabraOculta.includes('_')){
+        setTimeout(() => {
+            hasGanado();
+        }, 1000);
+    }
+
     actualizarPalabra();
     return;
 }
-
 
 function actualizarPalabra(){
     let palabraHTML = document.getElementById('palabra');
@@ -58,6 +63,10 @@ function agregarFallo(){
     if(widthActual < 100){
         barra.style.width = (widthActual + (100 / intentosMaximos)) + '%';
     }
+}
+
+function hasGanado() {
+    alert('Has ganado!');
 }
 
 function reiniciarJuego(){
