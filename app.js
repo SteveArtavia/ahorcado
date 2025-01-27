@@ -29,9 +29,6 @@ function adivinarLetra(letra) {
         }
     }
 
-<<<<<<< HEAD
-    document.getElementById('letra').value = '';
-=======
     if(!palabraSecreta.includes(letra)){
         if(intentos < intentosMaximos){
             intentos++;
@@ -44,19 +41,10 @@ function adivinarLetra(letra) {
         }
     }
 
->>>>>>> desarrollo
     actualizarPalabra();
     return;
 }
 
-<<<<<<< HEAD
-document.getElementById('letra').addEventListener('keydown', (event) => {
-    if(event.key === 'Enter'){
-        adivinarLetra();
-    }
-})
-=======
->>>>>>> desarrollo
 
 function actualizarPalabra(){
     let palabraHTML = document.getElementById('palabra');
@@ -64,9 +52,6 @@ function actualizarPalabra(){
     return;
 }
 
-<<<<<<< HEAD
-
-=======
 function agregarFallo(){
     let barra = document.getElementById('barra');
     let widthActual = parseInt(barra.style.width) || 0;
@@ -78,7 +63,6 @@ function agregarFallo(){
 function reiniciarJuego(){
     location.reload();
 }
->>>>>>> desarrollo
 
 console.log(palabraSecreta);
 console.log(palabraOculta);
