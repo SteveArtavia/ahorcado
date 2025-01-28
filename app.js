@@ -21,7 +21,7 @@ function mostrarPalabra() {
 
 mostrarPalabra();
 
-function adivinarLetra(letra) {
+window.adivinarLetra = function(letra) {
     for(i = 0; i < palabraSecreta.length; i++){
         if(letra === palabraSecreta[i]){
             palabraOculta[i] = letra;
