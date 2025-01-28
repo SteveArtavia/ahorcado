@@ -7,9 +7,9 @@
 - palabras.js: Contiene un array de palabras que se utilizarán en el juego.
 
 ## Estructura del código
-palabras.js: Contiene un array de palabras que se utilizan como palabras secretas en el juego.
+<strong>palabras.js:</strong> Contiene un array de palabras que se utilizan como palabras secretas en el juego.
 
-app.js:
+<strong>app.js:</strong><br>
 <strong>generarPalabra():</strong> Selecciona una palabra aleatoria del array de palabras.
 
 <strong>mostrarPalabra():</strong> Muestra la palabra secreta oculta en la interfaz de usuario.
