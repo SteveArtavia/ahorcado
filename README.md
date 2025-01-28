@@ -6,7 +6,7 @@
 - app.js: Contiene la lógica principal del juego, incluyendo la generación de palabras aleatorias, el seguimiento de los intentos y la actualización de la interfaz de usuario.
 - palabras.js: Contiene un array de palabras que se utilizarán en el juego.
 
-# Estructura del código
+## Estructura del código
 palabras.js: Contiene un array de palabras que se utilizan como palabras secretas en el juego.
 
 app.js:
@@ -17,12 +17,12 @@ agregarFallo(): Incrementa el contador de intentos y actualiza la barra de progr
 hasGanado(): Muestra un mensaje de victoria cuando el jugador adivina todas las letras.
 reiniciarJuego(): Recarga la página para iniciar una nueva partida.
 
-# Posibles mejoras
+## Posibles mejoras
 - Interfaz de usuario: Se puede mejorar la interfaz con CSS para hacerla más atractiva y amigable.
 - Dificultad ajustable: Implementar diferentes niveles de dificultad ajustando el número máximo de intentos o la longitud de las palabras.
 - Temas personalizables: Permitir al usuario elegir diferentes temas visuales para el juego.
 
-# Tecnologias
+## Tecnologias
 - Javascript
 - HTML
 - CSS
