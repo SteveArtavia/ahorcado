@@ -11,10 +11,15 @@ palabras.js: Contiene un array de palabras que se utilizan como palabras secreta
 
 app.js:
 generarPalabra(): Selecciona una palabra aleatoria del array de palabras.
+
 mostrarPalabra(): Muestra la palabra secreta oculta en la interfaz de usuario.
+
 adivinarLetra(): Comprueba si la letra ingresada por el usuario está en la palabra secreta y actualiza la interfaz.
+
 agregarFallo(): Incrementa el contador de intentos y actualiza la barra de progreso.
+
 hasGanado(): Muestra un mensaje de victoria cuando el jugador adivina todas las letras.
+
 reiniciarJuego(): Recarga la página para iniciar una nueva partida.
 
 ## Posibles mejoras
