@@ -44,7 +44,9 @@ window.adivinarLetra = function(letra) {
     if(!palabraOculta.includes('_')){
         setTimeout(() => {
             hasGanado();
+            reiniciarJuego();
         }, 1000);
+        
     }
 
     actualizarPalabra();
